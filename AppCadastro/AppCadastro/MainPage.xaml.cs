@@ -9,15 +9,18 @@ namespace AppCadastro
 {
 	public partial class MainPage : ContentPage
 	{
+        public string Nome { get; set; }
+        public string Email { get; set; }
         public MainPage()
 		{
 			InitializeComponent();
         }
-        private void btnCadastrar(object sender, ItemTappedEventArgs e)
+        void btnCadastrar(object sender, System.EventArgs e)
         {
-            var veiculo = (Veiculo)e.Item;
+            var nome = txtNome.Text;
+            var email = txtEmail.Text;
 
-            DisplayAlert("SUCESSO", string.Format("O cliente ABC foi cadastrado com o e-mail E-mail@", veiculo.Nome, veiculo.PrecoFormatado), "ok");
+            DisplayAlert("Sucesso", string.Format("O cliente '{0}' foi cadastrado com o e-mail '{1}'", nome, email), "ok");
         }
 	}
 }

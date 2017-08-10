@@ -11,5 +11,5 @@
         <Entry x:Name="txtEmail" Text="" Keyboard="Email" />
         <Button Text="CADASTRAR" HorizontalOptions="Center" Clicked="btnCadastrar" />
     </StackLayout>
-
+    
 </ContentPage>
